@@ -1,11 +1,16 @@
-import React from 'react';
+import React from 'react'
+import Header from 'components/Header'
+import Weather from './Weather'
+import { GlobalStyle } from 'styles/GlobalStyle'
 
-function App() {
-  return (
-    <div>
-      <p>Definitely Maybe</p>
-    </div>
-  );
-}
+const App = () => (
+  <>
+    <Header />
+    <section className="mt-5">
+      <Weather />
+    </section>
+    <GlobalStyle />
+  </>
+)
 
-export default App;
+export default App
