@@ -6,6 +6,8 @@ describe('WeatherSearch', () => {
   it('renders successfully', () => {
     const { getByTestId, getByLabelText } = render(
       <WeatherSearch
+        city=""
+        country=""
         setCity={() => null}
         setCountry={() => null}
         onSubmit={() => null}

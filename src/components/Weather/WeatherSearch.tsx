@@ -16,12 +16,16 @@ interface SelectState {
 }
 
 interface IProps {
+  city: string
+  country: string
   setCity: Dispatch<string>
   setCountry: Dispatch<string>
   onSubmit: (event: FormEvent) => void
 }
 
 const WeatherSearch:React.FC<IProps> = ({
+  city,
+  country,
   setCity,
   setCountry,
   onSubmit,
@@ -37,6 +41,8 @@ const WeatherSearch:React.FC<IProps> = ({
         currentOption.label.localeCompare(nextOption.label)
       ))
 
+  const defaultValue = options.find(({ value }) => value === country)
+
   return (
     <form
       data-testid="weather-search-form"
@@ -51,11 +57,13 @@ const WeatherSearch:React.FC<IProps> = ({
         placeholder="Enter a city"
         className="border-0"
         onChange={e => setCity(e.target.value)}
+        defaultValue={city}
       />
       <Select
         aria-label="Option to select country"
         placeholder="Enter a country"
         options={options}
+        value={defaultValue}
         // Relevant GitHub issue about onChange's TypeScript problems
         // https://github.com/JedWatson/react-select/issues/2902
         onChange={({ value }: any) => setCountry(value)}
