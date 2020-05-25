@@ -20,35 +20,38 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     background-color: var(--lynx-white);
     color: var(--black-pearl);
+  }
+
+  main {
     min-height: 100vh;
   }
 
   @media only screen and (max-width: 767.98px) {
-    body {
+    main {
       padding: 1rem;
     }
   }
 
   @media only screen and (min-width: 768px) and (max-width: 991.98px) {
-    body {
+    main {
       padding: 1.5rem 4rem;
     }
   }
 
   @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-    body {
+    main {
       padding: 2rem 5rem;
     }
   }
 
   @media only screen and (min-width: 1200px) and (max-width: 1919.98px) {
-    body {
+    main {
       padding: 3rem 6rem;
     }
   }
 
   @media only screen and (min-width: 1920px) {
-    body {
+    main {
       padding: 4rem 16rem;
     }
   }
