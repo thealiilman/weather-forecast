@@ -12,6 +12,10 @@ describe('Footer', () => {
     const paragraphElement = getByTestId('footer-paragraph')
     expect(paragraphElement).toHaveTextContent('Made by Ali Ilman')
     expect(paragraphElement).toHaveClass('m-0 text-center')
+    expect(paragraphElement).toHaveStyle(`
+      font-size: 1.25rem;
+    `)
+
     const myWebsiteLinkElement = paragraphElement.children[0]
     expect(myWebsiteLinkElement).toHaveAttribute(
       'href',
@@ -19,5 +23,9 @@ describe('Footer', () => {
     )
     expect(myWebsiteLinkElement).toHaveAttribute('target', '_blank')
     expect(myWebsiteLinkElement).toHaveAttribute('rel', 'noopener noreferrer')
+    expect(myWebsiteLinkElement).toHaveStyle(`
+      color: var(--black-pearl);
+      font-weight: 600;
+    `)
   })
 })
