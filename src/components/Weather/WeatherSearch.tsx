@@ -56,7 +56,7 @@ const WeatherSearch:React.FC<IProps> = ({
         type="text"
         placeholder="Enter a city"
         className="border-0"
-        onChange={e => setCity(e.target.value)}
+        onChange={e => setCity(e.target.value.trim())}
         defaultValue={city}
       />
       <Select
