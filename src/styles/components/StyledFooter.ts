@@ -9,6 +9,10 @@ const StyledFooter = styled.footer`
     font-weight: 600;
     color: var(--black-pearl);
   }
+
+  small {
+    font-size: .75rem;
+  }
 `
 
 export default StyledFooter
